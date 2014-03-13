@@ -1,1 +1,143 @@
-<h1>xinyun's HomePage</h1>It works.
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>coveflow</title>
+<style>
+li{
+	list-style:none;
+}
+body{
+	padding:0;
+	margin:0;
+	height:100%;
+	width:100%;
+	overflow:hidden;
+	background:#333;
+}
+.coveflow{
+	width:1px;
+	height:1px;
+	position:absolute;
+	top:50%;
+	left:50%;
+}
+.coveflow *{
+	margin:0;
+	padding:0;
+	list-style:none;
+	top:-200px; 
+}
+.coveflow div{
+	width:480px;
+	height:360px;
+	position:absolute;
+	-webkit-transition: -webkit-transform  300ms ease-out; 
+}
+.coveflow ul{
+	-webkit-perspective: 480;
+	-webkit-transform-style:flat;
+}
+.coveflow li{
+	display:block;
+	width:480px;
+	-webkit-transition: -webkit-transform 300ms ease-out; 
+	-webkit-box-reflect: below 0 -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(60%, transparent), to(rgba(255,255,255,.2)));
+}
+.coveflow .turnLeft,.coveflow .turnRight{
+	-webkit-transform: scale(.6);
+	
+}
+.coveflow .turnLeft li{
+	-webkit-transform: rotateY(40deg);
+}
+
+.coveflow .turnRight li{
+	-webkit-transform: rotateY(-40deg);
+}
+.coveflow .flat{
+	-webkit-transform: scale(1);
+}
+.coveflow .flat li{
+	-webkit-transform: rotateY( 0deg );
+}
+</style>
+</head>
+
+<body>
+<div id="coveflow" class="coveflow">
+    <div >
+        <ul>
+            <li>
+                <img src="pic/1.jpg" />
+            </li>
+        </ul>
+    </div>
+    <div >
+        <ul>
+            <li>
+                <img src="pic/2.jpg" />
+            </li>
+        </ul>
+    </div>
+    <div >
+        <ul>
+            <li>
+                <img src="pic/3.jpg" />
+            </li>
+        </ul>
+    </div>
+    <div >
+        <ul>
+            <li>
+                <img src="pic/4.jpg" />
+            </li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>
+                <img src="pic/5.jpg" />
+            </li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>
+                <img src="pic/6.jpg" />
+            </li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>
+                <img src="pic/7.jpg" />
+            </li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>
+                <img src="pic/8.jpg" />
+            </li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>
+                <img src="pic/9.jpg" />
+            </li>
+        </ul>
+    </div>
+    
+
+</div>
+
+<script src="jquery.js" ></script>
+<script src="coveflow.js" ></script>
+<script>
+//$('#coveflow').coveflow({onIndexChanged:function(index){alert(index)}});
+$('#coveflow').coveflow({onIndexChanged:function(index){}});
+</script>
+</body>
+</html>
